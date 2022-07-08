@@ -13,12 +13,8 @@ class Guira < Formula
     bin.install "guira-macosx.command" => "guira"
 
     inreplace bin/"guira" do |s|
-      s.gsub! "./lib", libexec
-      s.sub! /^dir=.*$/, "dir=#{opt_prefix}"
+      s.gsub!("./lib", libexec)
+      s.sub!(/^dir=.*$/, "dir=#{opt_prefix}")
     end
-  end
-
-  test do
-    system "true"
   end
 end
