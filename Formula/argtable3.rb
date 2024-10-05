@@ -13,19 +13,33 @@ class Argtable3 < Formula
   def install
     system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
     system "cmake", "--build", "build"
+    system "ctest", "--test-dir", "build"
     system "cmake", "--install", "build"
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test argtable3`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system bin/"program", "do", "something"`.
-    system "false"
+    (testpath/"test.c").write <<~EOS
+      #include "argtable3.h"
+      #include <assert.h>
+      #include <stdio.h>
+
+      int main (int argc, char **argv) {
+        struct arg_lit *all = arg_lit0 ("a", "all", "show all");
+        struct arg_end *end = arg_end(20);
+        void *argtable[] = {all, end};
+
+        assert (arg_nullcheck(argtable) == 0);
+        if (arg_parse(argc, argv, argtable) == 0) {
+          if (all->count) puts ("Received option");
+        } else {
+          puts ("Invalid option");
+        }
+      }
+    EOS
+    system ENV.cc, "test.c", "-L#{lib}", "-I#{include}", "-largtable3",
+                   "-o", "test"
+    assert_match "Received option", shell_output("./test -a")
+    assert_match "Received option", shell_output("./test --all")
+    assert_match "Invalid option", shell_output("./test -t")
   end
 end
