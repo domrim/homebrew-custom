@@ -6,7 +6,7 @@ class Argtable3 < Formula
   homepage "http://www.argtable.org"
   url "https://github.com/argtable/argtable3/archive/refs/tags/v3.2.2.f25c624.tar.gz"
   sha256 "a5c66d819fa0be0435f37ed2fb3f23e371091722ff74219de97b65f6b9914e51"
-  license "NOASSERTION"
+  license "BSD-3-Clause"
 
   depends_on "cmake" => :build
 
