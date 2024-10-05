@@ -3,15 +3,15 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Blisp < Formula
   desc "ISP tool & library for Bouffalo Labs RISC-V Microcontrollers and SoCs"
-  homepage ""
+  homepage "https://github.com/pine64/blisp"
   url "https://github.com/pine64/blisp/archive/refs/tags/v0.0.4.tar.gz"
   sha256 "288a8165f7dce604657f79ee8eea895cc2fa4e4676de5df9853177defd77cf78"
   license "MIT"
+  head "https://github.com/pine64/blisp.git", branch: "master"
 
   depends_on "cmake" => :build
   depends_on "libserialport" => :build
   depends_on "argtable3" => :build
-  depends_on "pkgconfig" => :build
 
   def install
     system "cmake", "-DBLISP_USE_SYSTEM_LIBRARIES=ON", "-DBLISP_BUILD_CLI=ON" "-S", ".", "-B", "build", *std_cmake_args
