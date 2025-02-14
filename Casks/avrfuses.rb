@@ -1,6 +1,6 @@
 cask "avrfuses" do
-  version "1.6.1"
-  sha256 "19c4040251268d7ea0a02dcf2ca4409d138f6983ca2ae1d38dd53bc95d931d4b"
+  version "1.6.2"
+  sha256 "2753f53304d135e574480fdcc53375fb27ed85c9e32170fca418d3ce4b324f84"
 
   url "https://github.com/vonnieda/AVRFuses/releases/download/v#{version}/AVRFuses_#{version}.zip",
       verified: "github.com/vonnieda/AVRFuses/"
