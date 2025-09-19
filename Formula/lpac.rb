@@ -1,8 +1,8 @@
 class Lpac < Formula
   desc "C-based eUICC LPA"
   homepage "https://github.com/estkme-group/lpac"
-  url "https://github.com/estkme-group/lpac/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "3d87080a625b10430eebb82f89e2d24e16a84a8435a9c40b3718fd88c82028ba"
+  url "https://github.com/estkme-group/lpac/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "661dffbd1e9e5732dab4a0bb0a9837d4906c8c66bd748bda262fe3e8d3e420f6"
   license "AGPL-3.0"
 
   depends_on "cmake" => :build
