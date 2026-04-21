@@ -1,8 +1,8 @@
 class Kituserlookup < Formula
   desc "KIT AD Query Tool"
   homepage "https://gitlab.kit.edu/kit/kit-cert/tools/kituserlookup"
-  url "https://gitlab.kit.edu/kit/kit-cert/tools/kituserlookup/-/archive/v2.2.19/kituserlookup-v2.2.19.tar.gz"
-  sha256 "8c72a1ed1180f94029c83ad451e781067d86643d4473b3d39462a16a2fe64951"
+  url "https://gitlab.kit.edu/kit/kit-cert/tools/kituserlookup/-/archive/v2.3.2/kituserlookup-v2.3.2.tar.gz"
+  sha256 "54433caafb744fee73ead0ea61d1afe009e1ff9a5e74e2a69a7b13bc038c9763"
   license "MIT"
 
   depends_on "go" => :build

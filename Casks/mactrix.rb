@@ -1,10 +1,10 @@
 cask "mactrix" do
-  version "0.1.0"
-  sha256 "4e355f69c83d4e34c1fc7e362696cab88a46fdaf62190f50fe1d5861a654422f"
+  version "0.2.0"
+  sha256 "638c9d8a119218a3570dab735bf7292584b59708e790876156d76bf98e5e69ad"
 
   url "https://github.com/viktorstrate/mactrix/releases/download/v#{version}/Mactrix.app.zip"
   name "Mactrix"
-  desc "Native Matrix client for macOS"
+  desc "Native Matrix client"
   homepage "https://github.com/viktorstrate/mactrix"
 
   livecheck do
