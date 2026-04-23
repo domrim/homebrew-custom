@@ -1,8 +1,8 @@
 class MatrixMigrate < Formula
   desc "CLI to migrate one matrix account to a new one"
   homepage "https://gitlab.com/domrim/matrix-migrate"
-  url "https://gitlab.com/domrim/matrix-migrate/-/archive/v0.2.0/matrix-migrate-v0.2.0.tar.gz"
-  sha256 "86393a6f6cb2ecca8ec76277e36da103dd75005b842021ceda4babb3460b1402"
+  url "https://gitlab.com/domrim/matrix-migrate/-/archive/v0.3.0/matrix-migrate-v0.3.0.tar.gz"
+  sha256 "2a67dafe2b29de9648fc09df8240bdf2a75a56b425a087e42deb653f52e77ee4"
   license "MIT"
 
   depends_on "rustup" => :build
