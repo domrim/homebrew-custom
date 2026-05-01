@@ -1,15 +1,15 @@
 cask "tammy" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.0"
-  sha256 arm: "a490ad92fdcbbd4924800cdaec78613a55ca81b7b23be52ec76270b7489a9f42",
-         intel: "c9110a6800dedfa71440f2740719620c7bf63f1ac3b2526f241fb1844883ce39"
+  version "26.4.2"
+  sha256 arm:   "6b91071610ff33e8fe3ad96a91e4cd3ed0bed8526af4aec9f543199765866084",
+         intel: "de99c7f869d036a99d391e72c5d161ddf72b7cab834a98f66e1877d5149f7ff6"
 
   url "https://gitlab.com/api/v4/projects/61851918/packages/generic/Tammy-MacOS-#{arch}.dmg/#{version}/Tammy-MacOS-#{arch}-#{version}.dmg",
-      verified: "gitlab.com/api/v4/projects/61851918"
+      verified: "gitlab.com/api/v4/projects/61851918/"
   name "Tammy"
-  desc "A fast and secure Matrix messenger"
-  homepage "https://tammy.connect2x.de"
+  desc "Fast and secure Matrix messenger"
+  homepage "https://tammy.connect2x.de/"
 
   livecheck do
     url "https://gitlab.com/connect2x/tammy.git"
