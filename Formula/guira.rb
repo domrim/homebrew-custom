@@ -2,8 +2,8 @@ class Guira < Formula
   desc "RA-Oberfläche für den Teilnehmerservice der DFN-PKI"
   homepage "https://blog.pki.dfn.de/tag/guira-releases/"
 
-  url "https://pki.pca.dfn.de/guira/guira-4.2.zip"
-  sha256 "577d5da44c649565290071bfe268f2e268778a2425756c3c9c97b80c059d791d"
+  url "https://pki.pca.dfn.de/guira/guira-4.3.zip"
+  sha256 "208098f1a7990cb9421a2c23a60d8171748b613282b3dac0bf280115950e2b7b"
 
   livecheck do
     url "https://blog.pki.dfn.de/feed/"
