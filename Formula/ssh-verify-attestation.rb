@@ -1,10 +1,10 @@
 class SshVerifyAttestation < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
   homepage "https://www.openssh.com/"
-  url "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.3p1.tar.gz"
-  mirror "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.3p1.tar.gz"
-  version "10.3p1"
-  sha256 "56682a36bb92dcf4b4f016fd8ec8e74059b79a8de25c15d670d731e7d18e45f4"
+  url "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.5p1.tar.gz"
+  mirror "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.5p1.tar.gz"
+  version "10.5p1"
+  sha256 "d44d28a839ea9daf969cc69150fde59910b2b39361dad81a3bd6cbd19218db11"
   license "SSH-OpenSSH"
   compatibility_version 1
 
@@ -46,14 +46,15 @@ class SshVerifyAttestation < Formula
       --with-libedit
       --with-kerberos5
       --with-pam
-      --with-ssl-dir=#{Formula["openssl@3"].opt_prefix}
+      --with-ssl-dir=#{formula_opt_prefix("openssl@3")}
       --with-security-key-builtin
     ]
 
     args << "--with-privsep-path=#{var}/lib/sshd" if OS.linux?
 
     system "./configure", *args, *std_configure_args
-    system "make ssh-verify-attestation"
+    system "make", "ssh-verify-attestation"
+    ENV.deparallelize
 
     bin.install "regress/misc/ssh-verify-attestation/ssh-verify-attestation" => "ssh-verify-attestation"
   end
