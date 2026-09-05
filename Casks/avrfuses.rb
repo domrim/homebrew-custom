@@ -2,8 +2,7 @@ cask "avrfuses" do
   version "1.6.2"
   sha256 "2753f53304d135e574480fdcc53375fb27ed85c9e32170fca418d3ce4b324f84"
 
-  url "https://github.com/vonnieda/AVRFuses/releases/download/v#{version}/AVRFuses_#{version}.zip",
-      verified: "github.com/vonnieda/AVRFuses/"
+  url "https://github.com/vonnieda/AVRFuses/releases/download/v#{version}/AVRFuses_#{version}.zip"
   name "AVRFuses"
   desc "Simple, graphical AVR fuse editor front end for avrdude"
   homepage "https://vonnieda.org/software/avrfuses"
