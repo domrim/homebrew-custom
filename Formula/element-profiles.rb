@@ -1,8 +1,8 @@
 class ElementProfiles < Formula
   desc "Manage per-account Element (Matrix) profile applications with custom icons"
   homepage "https://gitlab.net.scc.kit.edu/collective-ai-slop/element-profiles"
-  url "https://gitlab.net.scc.kit.edu/collective-ai-slop/element-profiles/-/archive/v0.4.0/element-profiles-v0.4.0.tar.gz"
-  sha256 "1d0506e731e498635451e9f113b8c9dd4fb5d25a16dfa319c5a9b9179aeee664"
+  url "https://gitlab.net.scc.kit.edu/collective-ai-slop/element-profiles/-/archive/v0.4.1/element-profiles-v0.4.1.tar.gz"
+  sha256 "bfc528f849d226a4198de01992fff11082124dd1c07c24fa68165a36a2affd68"
   head "https://gitlab.net.scc.kit.edu/collective-ai-slop/element-profiles.git", branch: "main"
 
   depends_on xcode: :build
